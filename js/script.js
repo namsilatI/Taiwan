@@ -1,7 +1,7 @@
-import { headerScript } from "/js/header-script.js";
+import { headerScript } from "../js/header-script.js";
 
 ////////////////////////////////////HEADER///////////////////////////////////////
-fetch('header.html')
+fetch('../html/header.html')
     .then(response => response.text())
     .then(html => {
         document.getElementById('header').innerHTML = html;
