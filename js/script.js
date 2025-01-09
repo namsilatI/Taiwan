@@ -1,4 +1,4 @@
-import { headerScript } from "/js/header-script.js";
+import { headerScript } from "js/header-script.js";
 
 ////////////////////////////////////HEADER///////////////////////////////////////
 fetch('header.html')
