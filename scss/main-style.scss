@@ -1,3 +1,31 @@
+@mixin titleTheme{
+    .part-block_title{
+        position: relative;
+        font-size: 20px; 
+        text-transform: uppercase; 
+        background-color: rgb(253, 228, 191);
+        border: 2px solid #222;
+        padding: 1vh;
+        border-radius: 1vh;
+        margin: 5vh 5vh 2vh 5vh;
+    }
+    .part-block_title:before, .part-block_title:after {
+        background-color: #c50000;
+        position: absolute; 
+        content: '';
+        height: 10px;
+        width: 10px; 
+        border-radius: 50%;
+        bottom: 18px;
+    }
+    .part-block_title:before {
+       left: -4vh;
+    }
+    .part-block_title:after {
+       right: -4vh;
+    }
+}
+
 .main-container_nav{
     background-color: beige;
     padding: 0.5vh;
@@ -29,4 +57,49 @@
 .main-container_part{
     max-width: 150vh;
     margin: 0 auto;
+    .container-part_block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include titleTheme();
+        .part-block_info{
+            display: flex;
+            justify-content: center;
+            gap: 5vh;
+            .block-info_left{
+                flex: 1;
+                font-size: x-large;
+                text-align: justify;
+                line-height: 1.5;
+            }
+            .block-info_right{
+                display: flex;
+                flex: 1;
+                flex-direction: row;
+                align-items: start;
+                justify-content: center;               
+                flex-wrap: wrap-reverse;
+                gap: 3vh 5vh;
+                .info-right_map{
+                    .right-map_container{
+                        display: flex;
+                        column-gap: 3vh;
+                    }  
+                }
+                .info-right_flag{
+                    img{
+                        display: inline-flex;
+                    }
+                }
+                img{
+                    width: 30vh;
+                }
+                figcaption{
+                    margin-top: 2vh;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
+
