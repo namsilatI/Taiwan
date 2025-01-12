@@ -1,0 +1,32 @@
+.main-container_nav{
+    background-color: beige;
+    padding: 0.5vh;
+    .container-nav_container{
+        margin: 0 auto;
+        max-width: 150vh;
+        .container-navigation_list{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0;
+            li{
+                min-width: 20vh;
+                background-color: rgb(253, 228, 191);
+                border-radius: 1vh;
+                text-align: center;
+                font-size: larger;
+                font-weight: 600;
+                a{
+                    display: block;
+                    padding: 1.5vh;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.main-container_part{
+    max-width: 150vh;
+    margin: 0 auto;
+}
