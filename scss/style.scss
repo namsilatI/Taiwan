@@ -6,6 +6,8 @@ body, html{
     margin: 0;
     font-family: 'Montserrat';
     box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 li{

@@ -7,7 +7,7 @@
         border: 2px solid #222;
         padding: 1vh;
         border-radius: 1vh;
-        margin: 5vh 5vh 2vh 5vh;
+        margin: 3vh 5vh 3vh 5vh;
     }
     .part-block_title:before, .part-block_title:after {
         background-color: #c50000;
@@ -26,12 +26,28 @@
     }
 }
 
+.active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    pointer-events: all;
+}
+  
+.previous {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    pointer-events: none;
+}
+
 .main-container_nav{
     background-color: beige;
     padding: 0.5vh;
+    z-index: 1;
+    top: 0;
     .container-nav_container{
         margin: 0 auto;
-        max-width: 150vh;
+        max-width: 160vh;
         .container-navigation_list{
             display: flex;
             flex-direction: row;
@@ -55,8 +71,10 @@
 }
 
 .main-container_part{
-    max-width: 150vh;
-    margin: 0 auto;
+    width: 160vh;
+    position: absolute;
+    left: 50%;
+    translate: (-50%);
     .container-part_block{
         display: flex;
         flex-direction: column;
@@ -76,7 +94,7 @@
                 display: flex;
                 flex: 1;
                 flex-direction: row;
-                align-items: start;
+                align-items: center;
                 justify-content: center;               
                 flex-wrap: wrap-reverse;
                 gap: 3vh 5vh;
@@ -84,22 +102,52 @@
                     .right-map_container{
                         display: flex;
                         column-gap: 3vh;
+                        justify-content: center;
                     }  
                 }
                 .info-right_flag{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
                     img{
                         display: inline-flex;
                     }
                 }
                 img{
                     width: 30vh;
+                    transition: 0.3s;
+                }
+                img:hover{
+                    transform: scale(1.05);
+                    cursor: zoom-in;
                 }
                 figcaption{
-                    margin-top: 2vh;
+                    margin: 2vh auto;
                     text-align: center;
+                    font-size: large;
+                    max-width: 50vh;
+                    
                 }
             }
         }
     }
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 1500px;
+}
