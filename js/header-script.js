@@ -39,12 +39,24 @@ export function headerScript(){
 
     let languageContent = {
         "twLang": {
-            "about": "эбоутус",
-            "passport": "паспортес"
+            "aboutNav": "关于",
+            "passportNav": "护照",
+            "introduction": "导言",
+            "history": "历史",
+            "geography": "地理",
+            "economy": "经济",
+            "goverment": "政府与政治",
+            "status": "国际地位"
         },
         "usLang": {
-            "about": "About",
-            "passport": "Passport"
+            "aboutNav": "About",
+            "passportNav": "Passport",
+            "introduction": "Introduction",
+            "history": "History",
+            "geography": "Geography",
+            "economy": "Economy",
+            "goverment": "Government and Politics",
+            "status": "International Status"
         }
     }
     function switchLang(lang) {

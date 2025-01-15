@@ -1,3 +1,18 @@
+@mixin language($radius){
+    color: white;
+    background-color: black;
+    border-radius: $radius;
+}
+@mixin table{
+    th{
+        padding: 1.5vh;
+    }
+    .column-cell_us{
+        border-top: 3px solid black;
+    }
+}
+
+///////////////////////////////GENERAL////////////////////////////////////////
 .header{
     background-color: beige;
 }
@@ -11,7 +26,7 @@
         padding: 0vh 5vh;
     }
     .header-container_logo{
-        width: 50vh;
+        width: 570px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -38,11 +53,11 @@
     .container-navigation_list{
         display: flex;
         flex-direction: row;
-        gap: 15vh;
         font-size: x-large;
         font-weight: 600;
         padding: 0;
-
+        justify-content: space-around;
+        min-width: 40vh;
     }
 }
 
@@ -54,33 +69,21 @@
 }
 
 .language-table_column{
-    th{
-        padding: 1.5vh;
-    }
-    .column-cell_us{
-        border-top: 3px solid black;
-    }
+    @include  table();
 }
 
 .language-active-tw{
-    color: white;
-    background-color: black;
-    border-radius: 1vh 1vh 0px 0px;
+    @include language(1vh 1vh 0px 0px);
 }
 .language-active-us{
-    color: white;
-    background-color: black;
-    border-radius: 0px 0px 1vh 1vh;
+    @include language(0px 0px 1vh 1vh);
 }
 
 //..............time............//
-
+.container-time_table{
+    min-width: 18vh;
+}
 .time-table_column{
     font-size: large;
-    th{
-        padding: 1.5vh;
-    }
-    .row-cell_us{
-        border-top: 3px solid black;
-    }
+    @include table();
 } 
